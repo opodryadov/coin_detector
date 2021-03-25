@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .average_color {
+            background-color: RGB({{ average_color[0] }}, {{ average_color[1] }}, {{ average_color[2] }});
+        }
+    </style>
+</head>
+<body>
+    <div class="description">
+        <p><b>Размер изображения:</b> {{ size }} px</p>
+        <p><b>Количество монет на подложке:</b> {{ total_coins }} шт.</p>
+        <p><b>Общая сумма монет:</b> {{ total_amount }} руб.</p>
+        <p><b>Средний цвет картинки:</b> RGB({{ average_color[0] }}, {{ average_color[1] }}, {{ average_color[2] }})<div class="average_color"></div></p>
+    </div>
+</body>
+</html>
